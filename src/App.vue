@@ -3,7 +3,10 @@
     <div id="nav">
       <nav-bar />
     </div>
-    <b-container fluid="md">
+    <b-container
+      id="container"
+      fluid="md"
+    >
       <router-view />
     </b-container>
   </div>
@@ -18,3 +21,8 @@ export default {
   },
 };
 </script>
+<style>
+#container{
+  padding: 0;
+}
+</style>

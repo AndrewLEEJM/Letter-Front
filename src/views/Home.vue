@@ -77,8 +77,6 @@ export default {
       // the canvas.
       const options = {
         type: 'dataURL',
-        width: '700px',
-        height: '980px',
       };
       const output = await this.$html2canvas(el, options);
 
@@ -126,15 +124,46 @@ export default {
   min-width: 200px;
   height: 700px;
   margin-top: 70px;
-  margin-left: 100px;
+  margin-left: 130px;
 }
 .letter_back > p{
   position: relative;
   top: 105px;
-  left: 80px;
+  left: 75px;
   width: 347px;
   height: 504px;
   overflow: hidden;
   line-height: 2.25;
+}
+@media screen and (max-width: 800px){
+  .letter_container{
+    margin-top: 60px;
+    display: block;
+  }
+  .letter_back{
+    width: 400px;
+    min-width: 400px;
+    height: 570px;
+    background-image: url('../assets/images/letter-1.jpg');
+    background-size: contain;
+    margin: 0 auto;
+  }
+  .letter_write{
+    width: 400px;
+    min-width: 200px;
+    height: 700px;
+    margin: 30px auto;
+  }
+  .letter_back > p{
+    position: relative;
+    top: 82px;
+    left: 58px;
+    width: 347px;
+    height: 504px;
+    overflow: hidden;
+    line-height: 2.08;
+    font-size: 14px;
+    color: rgba(61, 59, 59, 0.87);
+  }
 }
 </style>
