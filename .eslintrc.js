@@ -1,17 +1,39 @@
 module.exports = {
   root: true,
   env: {
-    node: true
+    browser: true,
   },
-  'extends': [
-    'plugin:vue/essential',
-    'eslint:recommended'
-  ],
   parserOptions: {
-    parser: 'babel-eslint'
+    parser: "babel-eslint",
+    sourceType: "module",
   },
+  extends: ["prettier/vue", "airbnb-base", "plugin:vue/recommended"],
   rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off'
-  }
-}
+    "no-alert": "off",
+    "no-confirm": "off",
+    "no-restricted-globals": "off",
+    // 'comma-dangle': 'off',
+    "no-plusplus": "off",
+    "no-console": "off",
+    // 'class-methods-use-this': 'off',
+    "import/no-unresolved": "off",
+    // 'import/extensions': 'off',
+    "implicit-arrow-linebreak": "off",
+    // 'import/prefer-default-export': 'off',
+    "prefer-destructuring": [
+      "error",
+      {
+        object: true,
+        array: false,
+      },
+    ],
+    "vue/component-name-in-template-casing": [
+      "error",
+      "kebab-case",
+      {
+        ignores: [],
+      },
+    ],
+    "vue/multiline-html-element-content-newline": "off",
+  },
+};
