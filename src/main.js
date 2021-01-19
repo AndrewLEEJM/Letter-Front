@@ -7,6 +7,12 @@ import store from './store';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 
+const images = require.context(
+  '@/assets/images',
+  true,
+  /^.*\.jpg$/,
+);
+
 Vue.use(BootstrapVue);
 Vue.use(VueHtml2Canvas);
 Vue.config.productionTip = false;
@@ -14,5 +20,8 @@ Vue.config.productionTip = false;
 new Vue({
   router,
   store,
+  created() {
+    this.$store.dispatch('init', images.keys());
+  },
   render: (h) => h(App),
 }).$mount('#app');

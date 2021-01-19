@@ -5,7 +5,7 @@
       type="dark"
       variant="info"
     >
-      <b-navbar-brand href="#">
+      <b-navbar-brand @click="$router.push('/')">
         모두의 편지
       </b-navbar-brand>
 
