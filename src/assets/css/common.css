@@ -1,0 +1,83 @@
+@font-face {
+  font-family: 'BMJUA';
+  src: url('../fonts/BMJUA.ttf');
+}
+@font-face {
+  font-family: 'CuteFont-Regular';
+  src: url('../fonts/CuteFont-Regular.ttf');
+}
+@font-face {
+  font-family: 'NanumBrushScript-Regular';
+  src: url('../fonts/NanumBrushScript-Regular.ttf');
+}
+@font-face {
+  font-family: 'NanumPenScript-Regular';
+  src: url('../fonts/NanumPenScript-Regular.ttf');
+}
+@font-face {
+  font-family: 'SingleDay-Regular';
+  src: url('../fonts/SingleDay-Regular.ttf');
+}
+.letter_container{
+  margin-top: 60px;
+  display: flex;
+}
+.letter_back{
+  width: 500px;
+  min-width: 500px;
+  height: 700px;
+}
+.letter_write{
+  width: 500px;
+  min-width: 200px;
+  height: 700px;
+  margin-top: 70px;
+  margin-left: 130px;
+}
+.letter_back > p{
+  position: relative;
+  top: 105px;
+  left: 75px;
+  width: 347px;
+  height: 504px;
+  overflow: hidden;
+  line-height: 2.25;
+}
+.paper{
+  width: 300px;
+}
+a{
+  cursor: pointer;
+}
+#container{
+  padding: 0;
+}
+@media screen and (max-width: 800px){
+  .letter_container{
+    margin-top: 60px;
+    display: block;
+  }
+  .letter_back{
+    width: 400px;
+    min-width: 400px;
+    height: 560px;
+    background-size: contain;
+    margin: 0 auto;
+  }
+  .letter_write{
+    width: 400px;
+    min-width: 200px;
+    height: 700px;
+    margin: 30px auto;
+  }
+  .letter_back > p{
+    position: relative;
+    top: 82px;
+    left: 58px;
+    width: 290px;
+    height: 504px;
+    overflow: hidden;
+    line-height: 2.08;
+    font-size: 14px;
+  }
+}

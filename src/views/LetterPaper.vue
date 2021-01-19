@@ -32,12 +32,3 @@ export default {
   },
 };
 </script>
-
-<style>
-  .paper{
-    width: 300px;
-  }
-  a{
-    cursor: pointer;
-  }
-</style>

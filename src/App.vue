@@ -22,7 +22,5 @@ export default {
 };
 </script>
 <style>
-#container{
-  padding: 0;
-}
+  @import './assets/css/common.css'
 </style>
