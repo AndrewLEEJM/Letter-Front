@@ -3,6 +3,7 @@
     <b-button @click="$router.push('/letter-paper')">
       편지지 선택
     </b-button>
+
   </div>
 </template>
 
@@ -10,7 +11,11 @@
 
 export default {
   name: 'Home',
-  components: {
+
+  data() {
+    return {
+
+    };
   },
 };
 </script>

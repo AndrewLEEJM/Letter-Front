@@ -35,21 +35,36 @@
           {{ font.name }}
         </b-form-select-option>
       </b-form-select>
+      <span>색상 </span>
+      <colour-picker
+        v-model="colour"
+        :value="colour"
+        no-input
+        picker="compact"
+        style="border: 1px solid; width: 42px; height: 42px; border-radius: 5px"
+      />
       <b-button @click="screenshot">
         다운로드
       </b-button>
+      <b-button @click="reset">
+        초기화
+      </b-button>
+
     </div>
   </div>
 </template>
 
 <script>
+import ColourPicker from 'vue-colour-picker';
 
 export default {
   name: 'Write',
   components: {
+    ColourPicker,
   },
   data() {
     return {
+      colour: '#000000',
       letter: '',
       selectedFont: '',
       selectedFontSize: 10,
@@ -69,7 +84,7 @@ export default {
       return this.letter.replace(/(?:\r\n|\r|\n)/g, '<br />');
     },
     textFont() {
-      return `font-family: ${this.selectedFont};`;
+      return `font-family: ${this.selectedFont}; color: ${this.colour}`;
     },
   },
   created() {
@@ -90,6 +105,11 @@ export default {
       a.setAttribute('download', 'AllOfLetter.png');
       a.setAttribute('href', output);
       a.click();
+    },
+    reset() {
+      this.letter = '';
+      this.selectedFont = '';
+      this.colour = '#000000';
     },
   },
 };
@@ -168,7 +188,6 @@ export default {
     overflow: hidden;
     line-height: 2.08;
     font-size: 14px;
-    color: rgba(61, 59, 59, 0.87);
   }
 }
 </style>
