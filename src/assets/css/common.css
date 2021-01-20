@@ -52,6 +52,16 @@ a{
 #container{
   padding: 0;
 }
+.logo{
+  cursor: pointer;
+  margin: 0 auto;
+  font-family: serif;
+  color: aliceblue;
+}
+.logo > h1{
+  font-size: 30px;
+  font-weight: bold;
+}
 @media screen and (max-width: 800px){
   .letter_container{
     margin-top: 60px;

@@ -5,18 +5,19 @@
       type="dark"
       variant="info"
     >
-      <b-navbar-brand @click="$router.push('/')">
-        모두의 편지
-      </b-navbar-brand>
+      <div
+        class="logo"
+        @click="$router.push('/')"
+      >
+        <h1>모두의 편지</h1>
+      </div>
 
       <b-navbar-toggle target="nav-collapse" />
 
-      <b-collapse
+      <!-- <b-collapse
         id="nav-collapse"
         is-nav
       >
-
-        <!-- Right aligned nav items -->
         <b-navbar-nav>
 
           <b-nav-item-dropdown
@@ -37,20 +38,8 @@
             </b-dropdown-item>
           </b-nav-item-dropdown>
 
-          <b-nav-item-dropdown right>
-            <!-- Using 'button-content' slot -->
-            <template #button-content>
-              <em>User</em>
-            </template>
-            <b-dropdown-item href="#">
-              Profile
-            </b-dropdown-item>
-            <b-dropdown-item href="#">
-              Sign Out
-            </b-dropdown-item>
-          </b-nav-item-dropdown>
         </b-navbar-nav>
-      </b-collapse>
+      </b-collapse> -->
     </b-navbar>
   </div>
 </template>
