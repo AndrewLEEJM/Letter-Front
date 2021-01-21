@@ -62,6 +62,12 @@ a{
   font-size: 30px;
   font-weight: bold;
 }
+img.paper.img-thumbnail {
+  margin: 5px;
+}
+.p-4.bg-dark.container-fluid{
+  text-align: center
+}
 @media screen and (max-width: 800px){
   .letter_container{
     margin-top: 60px;
@@ -89,5 +95,9 @@ a{
     overflow: hidden;
     line-height: 2.08;
     font-size: 14px;
+  }
+  img.paper.img-thumbnail {
+    width: 200px;
+    margin: 5px;
   }
 }

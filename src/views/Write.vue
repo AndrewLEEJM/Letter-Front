@@ -84,7 +84,7 @@ export default {
       return this.letter.replace(/(?:\r\n|\r|\n)/g, '<br />');
     },
     textFont() {
-      return `font-family: ${this.selectedFont}; color: ${this.colour}`;
+      return `font-family: ${this.selectedFont}; color: ${this.colour};`;
     },
   },
   created() {
