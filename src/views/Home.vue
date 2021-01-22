@@ -1,10 +1,12 @@
 <template>
-  <div class="home">
+  <b-container
+    fluid
+    class="p-4"
+  >
     <b-button @click="$router.push('/letter-paper')">
       편지지 선택
     </b-button>
-
-  </div>
+  </b-container>
 </template>
 
 <script>

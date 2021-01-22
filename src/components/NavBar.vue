@@ -7,7 +7,7 @@
     >
       <div
         class="logo"
-        @click="$router.push('/')"
+        @click="goHome"
       >
         <h1>모두의 편지</h1>
       </div>
@@ -47,5 +47,12 @@
 <script>
 export default {
   name: 'NavBar',
+  methods: {
+    goHome() {
+      if (this.$route.path !== '/') {
+        this.$router.push('/');
+      }
+    },
+  },
 };
 </script>
