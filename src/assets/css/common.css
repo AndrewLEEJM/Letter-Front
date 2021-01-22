@@ -19,8 +19,9 @@
   src: url('../fonts/SingleDay-Regular.ttf');
 }
 .letter_container{
-  margin-top: 60px;
+  padding-top: 60px;
   display: flex;
+  border-top: 1px solid rgb(0, 0, 0);
 }
 .letter_back{
   width: 500px;
@@ -56,7 +57,6 @@ a{
   cursor: pointer;
   margin: 0 auto;
   font-family: serif;
-  color: aliceblue;
 }
 .logo > h1{
   font-size: 30px;
@@ -65,12 +65,13 @@ a{
 img.paper.img-thumbnail {
   margin: 5px;
 }
-.p-4.bg-dark.container-fluid{
-  text-align: center
+.p-4.container-fluid{
+  text-align: center;
+  border-top: 1px solid rgb(0, 0, 0);
 }
 @media screen and (max-width: 800px){
   .letter_container{
-    margin-top: 60px;
+    padding-top: 60px;
     display: block;
   }
   .letter_back{

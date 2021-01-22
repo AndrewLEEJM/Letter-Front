@@ -3,7 +3,7 @@
     <b-navbar
       toggleable="lg"
       type="dark"
-      variant="info"
+      variant="outline-primary"
     >
       <div
         class="logo"

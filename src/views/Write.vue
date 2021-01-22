@@ -43,13 +43,24 @@
         picker="compact"
         style="border: 1px solid; width: 42px; height: 42px; border-radius: 5px"
       />
-      <b-button @click="screenshot">
+      <b-button
+        variant="primary"
+        @click="screenshot"
+      >
         다운로드
       </b-button>
-      <b-button @click="reset">
+      <b-button
+        variant="danger"
+        @click="reset"
+      >
         초기화
       </b-button>
-
+      <b-button
+        variant="outline-success"
+        @click="$router.back()"
+      >
+        편지지 고르기
+      </b-button>
     </div>
   </div>
 </template>

@@ -1,7 +1,7 @@
 <template>
   <b-container
     fluid
-    class="p-4 bg-dark"
+    class="p-4"
   >
     <a
       v-for="paper in imgList"
