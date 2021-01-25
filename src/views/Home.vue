@@ -4,7 +4,7 @@
       id="mainBtn"
       @click="$router.push('/letter-paper')"
     >
-      편지지 쓰러 가기
+      편지 쓰러 가기
     </b-button>
   </div>
 </template>

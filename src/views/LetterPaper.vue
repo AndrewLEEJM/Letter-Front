@@ -3,6 +3,7 @@
     fluid
     class="p-4"
   >
+    <div id="explain" />
     <a
       v-for="paper in imgList"
       :key="paper"
