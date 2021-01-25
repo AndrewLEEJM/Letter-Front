@@ -21,6 +21,7 @@
         max-rows="14"
         placeholder="Enter something..."
       />
+      <br>
       <span>글꼴 </span>
       <b-form-select
         v-model="selectedFont"
@@ -43,23 +44,26 @@
         picker="compact"
         style="border: 1px solid; width: 42px; height: 42px; border-radius: 5px"
       />
+      <br>
       <b-button
+        variant="success"
+        @click="$router.back()"
+      >
+        편지지 고르기
+      </b-button>
+      <b-button
+        id="btn1"
         variant="primary"
         @click="screenshot"
       >
         다운로드
       </b-button>
       <b-button
+        id="btn2"
         variant="danger"
         @click="reset"
       >
         초기화
-      </b-button>
-      <b-button
-        variant="outline-success"
-        @click="$router.back()"
-      >
-        편지지 고르기
       </b-button>
     </div>
   </div>

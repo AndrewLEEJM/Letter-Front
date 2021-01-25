@@ -1,31 +1,23 @@
 <template>
-  <b-container
-    id="main"
-    fluid
-    class="p-4"
-  >
-    <b-button @click="$router.push('/letter-paper')">
-      편지지 선택
+  <div id="main">
+    <b-button
+      id="mainBtn"
+      @click="$router.push('/letter-paper')"
+    >
+      편지지 쓰러 가기
     </b-button>
-  </b-container>
+  </div>
 </template>
 
 <script>
-
 export default {
   name: 'Home',
 
   data() {
-    return {
-
-    };
+    return {};
   },
 };
 </script>
 <style>
-#main{
-  background-image: url('../assets/main.jpg');
-  height: 1000px;
-   background-size: cover;
-}
+
 </style>

@@ -21,7 +21,7 @@
 .letter_container{
   padding-top: 60px;
   display: flex;
-  border-top: 1px solid rgb(0, 0, 0);
+  border-top: 1px solid rgb(247, 238, 238);
 }
 .letter_back{
   width: 500px;
@@ -50,24 +50,41 @@
 a{
   cursor: pointer;
 }
+html,body { 
+  background-color: #812625;
+}
 #container{
   padding: 0;
 }
+#app{
+  background-color: #812625;
+  min-height: 100%;
+}
+span{
+  font-family: serif;
+  color: rgb(247, 238, 238);
+  font-weight: 600;
+}
 .logo{
   cursor: pointer;
-  margin: 0 auto;
+  margin: 10px auto;
   font-family: serif;
 }
 .logo > h1{
   font-size: 30px;
   font-weight: bold;
+  color: rgb(247, 238, 238);
 }
 img.paper.img-thumbnail {
-  margin: 5px;
+  margin: 15px;
+  width: 200px;
 }
 .p-4.container-fluid{
   text-align: center;
-  border-top: 1px solid rgb(0, 0, 0);
+  border-top: 1px solid rgb(247, 238, 238);
+}
+#btn1, #btn2{
+  margin-left: 10px;
 }
 @media screen and (max-width: 800px){
   .letter_container{
@@ -102,4 +119,23 @@ img.paper.img-thumbnail {
     margin: 10px;
   }
   
+}
+#main {
+  background-image: url("../main.jpg");
+  width: 378px;
+  background-size: auto;
+  height: 720px;
+  padding: 0;
+  text-align: center;
+  margin: 0 auto;
+}
+#mainBtn{
+  position: relative;
+  top: 400px;
+  right: 3px;
+  padding: 10px;
+  background-color: rgba(240, 248, 255, 0);
+  color: #000;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
 }
