@@ -1,9 +1,7 @@
 <template>
   <div>
     <b-navbar
-      toggleable="lg"
       type="dark"
-      variant="outline-primary"
     >
       <div
         class="logo"
