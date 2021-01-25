@@ -1,5 +1,6 @@
 <template>
   <b-container
+    id="main"
     fluid
     class="p-4"
   >
@@ -21,3 +22,10 @@ export default {
   },
 };
 </script>
+<style>
+#main{
+  background-image: url('../assets/main.jpg');
+  height: 1000px;
+   background-size: cover;
+}
+</style>
