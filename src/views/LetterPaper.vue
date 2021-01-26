@@ -3,7 +3,11 @@
     fluid
     class="p-4"
   >
-    <div id="explain" />
+    <div id="explain">
+      <img
+        src="../assets/choice-paper.jpg"
+      >
+    </div>
     <a
       v-for="paper in imgList"
       :key="paper"

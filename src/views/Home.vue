@@ -1,5 +1,9 @@
 <template>
   <div id="main">
+    <img
+      src="../assets/main.jpg"
+      alt=""
+    >
     <b-button
       id="mainBtn"
       @click="$router.push('/letter-paper')"

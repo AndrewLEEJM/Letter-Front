@@ -124,7 +124,6 @@ img.paper.img-thumbnail:hover {
   
 }
 #main {
-  background-image: url("../main.jpg");
   width: 378px;
   background-size: auto;
   height: 720px;
@@ -134,8 +133,7 @@ img.paper.img-thumbnail:hover {
 }
 #mainBtn{
   position: relative;
-  top: 400px;
-  right: 3px;
+  top: -390px;
   padding: 10px;
   background-color: rgba(240, 248, 255, 0);
   color: rgb(68, 68, 68);
@@ -150,6 +148,5 @@ img.paper.img-thumbnail:hover {
 #explain{
   width: 295px;
   height: 125px;
-  background-image: url("../choice-paper.jpg");
   margin: 0 auto;
 }
