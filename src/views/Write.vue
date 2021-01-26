@@ -1,72 +1,87 @@
 <template>
-  <div class="letter_container">
-    <div
-      ref="shotMe"
-      class="letter_back"
-      :style="{
-        'background-image': 'url(' + require(`../assets/images/${backImg}`) + ')' }"
-    >
-      <p
-        :style="textFont"
-        v-html="letterText"
-      >
-        {{ letterText }}
-      </p>
+  <b-container
+    fluid
+    class="p-4"
+  >
+    <div id="explain">
+      <img src="../assets/write.jpg">
     </div>
-    <div class="letter_write">
-      <b-form-textarea
-        id="textarea-rows"
-        v-model="letter"
-        rows="14"
-        max-rows="14"
-        placeholder="Enter something..."
-      />
-      <br>
-      <span>글꼴 </span>
-      <b-form-select
-        v-model="selectedFont"
-        class="mb-3"
+    <div class="letter_container">
+      <div
+        ref="shotMe"
+        class="letter_back"
+        :style="{
+          'background-image':
+            'url(' + require(`../assets/images/${backImg}`) + ')',
+        }"
       >
-        <b-form-select-option
-          v-for="(font,idx) in allFont"
-          :key="idx"
-          :value="font.val"
-          :style="font.textStyle"
+        <p
+          :style="textFont"
+          v-html="letterText"
         >
-          {{ font.name }}
-        </b-form-select-option>
-      </b-form-select>
-      <span>색상 </span>
-      <colour-picker
-        v-model="colour"
-        :value="colour"
-        no-input
-        picker="compact"
-        style="border: 1px solid; width: 42px; height: 42px; border-radius: 5px"
-      />
-      <br>
-      <b-button
-        variant="success"
-        @click="$router.back()"
-      >
-        편지지 고르기
-      </b-button>
-      <b-button
-        id="btn1"
-        variant="primary"
-        @click="screenshot"
-      >
-        다운로드
-      </b-button>
-      <b-button
-        id="btn2"
-        variant="danger"
-        @click="reset"
-      >
-        초기화
-      </b-button>
+          {{ letterText }}
+        </p>
+      </div>
+      <div class="letter_write">
+        <b-form-textarea
+          id="textarea-rows"
+          v-model="letter"
+          rows="14"
+          max-rows="14"
+          placeholder="Enter something..."
+        />
+        <br>
+        <span>글꼴 </span>
+        <b-form-select
+          v-model="selectedFont"
+          class="mb-3"
+        >
+          <b-form-select-option
+            v-for="(font, idx) in allFont"
+            :key="idx"
+            :value="font.val"
+            :style="font.textStyle"
+          >
+            {{ font.name }}
+          </b-form-select-option>
+        </b-form-select>
+        <span>색상 </span>
+        <colour-picker
+          v-model="colour"
+          :value="colour"
+          no-input
+          picker="compact"
+          style="
+            border: 1px solid;
+            width: 42px;
+            height: 42px;
+            border-radius: 5px;
+          "
+        />
+        <br>
+        <b-button
+          variant="success"
+          @click="$router.back()"
+        >
+          편지지 고르기
+        </b-button>
+        <b-button
+          id="btn1"
+          variant="primary"
+          @click="screenshot"
+        >
+          다운로드
+        </b-button>
+        <b-button
+          id="btn2"
+          variant="danger"
+          @click="reset"
+        >
+          초기화
+        </b-button>
+      </div>
     </div>
-  </div>
+  </b-container>
 </template>
 
 <script>
@@ -85,11 +100,31 @@ export default {
       selectedFontSize: 10,
       allFont: [
         { name: '기본', val: '', textStyle: '' },
-        { name: '배민 주아체', val: 'BMJUA', textStyle: 'font-family: "BMJUA"' },
-        { name: '귀여움 기본', val: 'CuteFont-Regular', textStyle: 'font-family: "CuteFont-Regular' },
-        { name: '나눔 브러쉬', val: 'NanumBrushScript-Regular', textStyle: 'NanumBrushScript-Regular' },
-        { name: '나눔 펜', val: 'NanumPenScript-Regular', textStyle: 'font-family: "NanumPenScript-Regular"' },
-        { name: '하루체', val: 'SingleDay-Regular', textStyle: 'font-family: "SingleDay-Regular"' },
+        {
+          name: '배민 주아체',
+          val: 'BMJUA',
+          textStyle: 'font-family: "BMJUA"',
+        },
+        {
+          name: '귀여움 기본',
+          val: 'CuteFont-Regular',
+          textStyle: 'font-family: "CuteFont-Regular',
+        },
+        {
+          name: '나눔 브러쉬',
+          val: 'NanumBrushScript-Regular',
+          textStyle: 'NanumBrushScript-Regular',
+        },
+        {
+          name: '나눔 펜',
+          val: 'NanumPenScript-Regular',
+          textStyle: 'font-family: "NanumPenScript-Regular"',
+        },
+        {
+          name: '하루체',
+          val: 'SingleDay-Regular',
+          textStyle: 'font-family: "SingleDay-Regular"',
+        },
       ],
       backImg: '',
     };

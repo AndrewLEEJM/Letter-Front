@@ -1,7 +1,7 @@
 <template>
   <b-container
     fluid
-    class="p-4"
+    class="p-4 paper"
   >
     <div id="explain">
       <img

@@ -26,13 +26,14 @@
   width: 500px;
   min-width: 500px;
   height: 700px;
+  margin: 0 auto;
 }
 .letter_write{
   width: 500px;
   min-width: 200px;
   height: 700px;
   margin-top: 70px;
-  margin-left: 130px;
+  margin-left: 10px;
 }
 .letter_back > p{
   position: relative;
@@ -83,11 +84,19 @@ img.paper.img-thumbnail {
 img.paper.img-thumbnail:hover {
   filter: drop-shadow(15px 15px 15px black);
 }
-.p-4.container-fluid{
+.p-4.paper.container-fluid{
   text-align: center;
 }
 #btn1, #btn2{
   margin-left: 10px;
+}
+@media screen and (max-width: 991px){
+  #btn1{
+    margin-left: 0px;
+  }
+  #btn1, #btn2{
+    margin-top: 10px;
+  }
 }
 @media screen and (max-width: 800px){
   .letter_container{
@@ -121,8 +130,12 @@ img.paper.img-thumbnail:hover {
     width: 150px;
     margin: 10px;
   }
-  
+  #btn1, #btn2{
+    margin-top: 0px; 
+    margin-left: 10px;
+  }
 }
+
 #main {
   width: 378px;
   background-size: auto;
