@@ -21,7 +21,6 @@
 .letter_container{
   padding-top: 60px;
   display: flex;
-  border-top: 1px solid rgb(247, 238, 238);
 }
 .letter_back{
   width: 500px;
@@ -78,6 +77,11 @@ span{
 img.paper.img-thumbnail {
   margin: 15px;
   width: 200px;
+  padding: 0;
+  filter: drop-shadow(10px 10px 10px black);
+}
+img.paper.img-thumbnail:hover {
+  filter: drop-shadow(15px 15px 15px black);
 }
 .p-4.container-fluid{
   text-align: center;
@@ -135,10 +139,13 @@ img.paper.img-thumbnail {
   padding: 10px;
   background-color: rgba(240, 248, 255, 0);
   color: rgb(68, 68, 68);
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: 600;
+  font-family: serif;
+  font-weight: bold;
   border-radius: 0;
   border: 2px solid rgb(68, 68, 68);
+}
+#mainBtn:hover{
+  background-color: rgb(253, 207, 137);
 }
 #explain{
   width: 295px;
