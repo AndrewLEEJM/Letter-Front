@@ -1,24 +1,26 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <nav-bar />
-    </div>
-    <b-container
-      id="container"
-      fluid="md"
-    >
+  <v-app>
+    <nav-bar />
+
+    <v-main>
       <router-view />
-    </b-container>
-  </div>
+    </v-main>
+  </v-app>
 </template>
+
 <script>
 import NavBar from './components/NavBar.vue';
 
 export default {
   name: 'App',
+
   components: {
     NavBar,
   },
+
+  data: () => ({
+    //
+  }),
 };
 </script>
 <style>
