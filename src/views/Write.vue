@@ -16,7 +16,16 @@
         }"
       >
         <div>
+          <p
+            v-if="capture"
+            id="ptag"
+            :style="textFont"
+            v-html="letterText"
+          >
+            {{ letter }}
+          </p>
           <textarea
+            v-else
             id="texta"
             v-model="letter"
             name=""
@@ -117,6 +126,7 @@ export default {
         },
       ],
       backImg: '',
+      capture: false,
     };
   },
   computed: {
@@ -132,6 +142,7 @@ export default {
   },
   methods: {
     async screenshot() {
+      this.capture = true;
       const el = this.$refs.shotMe;
       // add option type to get the image version
       // if not provided the promise will return
@@ -145,6 +156,8 @@ export default {
       a.setAttribute('download', 'AllOfLetter.png');
       a.setAttribute('href', output);
       a.click();
+
+      this.capture = false;
     },
     reset() {
       this.letter = '';

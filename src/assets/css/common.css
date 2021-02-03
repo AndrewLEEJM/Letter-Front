@@ -43,9 +43,6 @@
   overflow: hidden;
   line-height: 2.25;
 }
-.letter_back > div > p{
-  word-break: break-all;
-}
 a{
   cursor: pointer;
 }
@@ -93,8 +90,18 @@ img.paper.img-thumbnail:hover {
   overflow: hidden; 
   outline: none; 
   resize: none;
+  width: 345px;
+}
+#ptag{
+  word-break: break-all;
+  position: absolute;
+  top: 0px;
+  width: 345px;
 }
 @media screen and (max-width: 800px){
+  #ptag{
+    width: 290px;
+  }
   .letter_container{
     padding-top: 60px;
     display: block;
@@ -119,7 +126,7 @@ img.paper.img-thumbnail:hover {
     width: 290px;
     height: 400px;
     overflow: hidden;
-    line-height: 2.23;
+    line-height: 2.25;
     font-size: 13px;
   }
   img.paper.img-thumbnail {
@@ -128,6 +135,7 @@ img.paper.img-thumbnail:hover {
   }
   #texta{
     height: 399px;
+    width: 290px;
   }
 }
 @media screen and (max-width: 450px){
@@ -149,15 +157,19 @@ img.paper.img-thumbnail:hover {
     width: 235px;
     height: 320px;
     overflow: hidden;
-    line-height: 1.98;
-    font-size: 12px;
+    line-height: 2.3;
+    font-size: 10px;
   }
   img.paper.img-thumbnail {
     width: 150px;
     margin: 10px;
   }
   #texta {
+    width: 235px;
     height: 320px;
+  }
+  #ptag{
+    width: 235px;
   }
 }
 
