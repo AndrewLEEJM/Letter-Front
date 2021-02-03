@@ -19,7 +19,7 @@
   src: url('../fonts/SingleDay-Regular.ttf');
 }
 .letter_container{
-  padding-top: 60px;
+  padding-top: 20px;
   display: flex;
   justify-content: center;
 }
@@ -103,7 +103,6 @@ img.paper.img-thumbnail:hover {
     width: 290px;
   }
   .letter_container{
-    padding-top: 60px;
     display: block;
   }
   .letter_back{
@@ -140,7 +139,6 @@ img.paper.img-thumbnail:hover {
 }
 @media screen and (max-width: 450px){
   .letter_container{
-    padding-top: 60px;
     display: block;
   }
   .letter_back{
