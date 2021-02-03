@@ -1,96 +1,99 @@
 <template>
-  <b-container
-    fluid
-    class="p-4"
-  >
-    <div id="explain">
-      <img src="../assets/write.jpg">
-    </div>
-    <div class="letter_container">
-      <div
-        ref="shotMe"
-        class="letter_back"
-        :style="{
-          'background-image':
-            'url(' + require(`../assets/images/${backImg}`) + ')',
-        }"
-      >
-        <p
-          :style="textFont"
-          v-html="letterText"
-        >
-          {{ letterText }}
-        </p>
+  <div>
+
+    <b-container
+      fluid
+      class="p-4"
+    >
+      <div id="explain">
+        <img src="../assets/write.jpg">
       </div>
-      <div class="letter_write">
-        <b-form-textarea
-          id="textarea-rows"
-          v-model="letter"
-          rows="14"
-          max-rows="14"
-          placeholder="Enter something..."
-        />
-        <br>
-        <span>글꼴 </span>
-        <b-form-select
-          v-model="selectedFont"
-          class="mb-3"
+      <div class="letter_container">
+        <div
+          ref="shotMe"
+          class="letter_back"
+          :style="{
+            'background-image':
+              'url(' + require(`../assets/images/${backImg}`) + ')',
+          }"
         >
-          <b-form-select-option
-            v-for="(font, idx) in allFont"
-            :key="idx"
-            :value="font.val"
-            :style="font.textStyle"
+          <div>
+            <p
+              :style="textFont"
+              v-html="letterText"
+            >
+              {{ letterText }}
+            </p>
+          </div>
+        </div>
+        <div class="letter_write">
+          <b-form-textarea
+            id="textarea-rows"
+            v-model="letter"
+            rows="14"
+            max-rows="14"
+            placeholder="Enter something..."
+          />
+          <br>
+          <span>글꼴 </span>
+          <b-form-select
+            v-model="selectedFont"
+            class="mb-3"
           >
-            {{ font.name }}
-          </b-form-select-option>
-        </b-form-select>
-        <span>색상 </span>
-        <colour-picker
-          v-model="colour"
-          :value="colour"
-          no-input
-          picker="compact"
-          style="
-            border: 1px solid;
-            width: 42px;
-            height: 42px;
-            border-radius: 5px;
-          "
-        />
-        <br>
-        <b-button
-          variant="success"
-          @click="$router.back()"
-        >
-          편지지 고르기
-        </b-button>
-        <b-button
-          id="btn1"
-          variant="primary"
-          @click="screenshot"
-        >
-          다운로드
-        </b-button>
-        <b-button
-          id="btn2"
-          variant="danger"
-          @click="reset"
-        >
-          초기화
-        </b-button>
+            <b-form-select-option
+              v-for="(font, idx) in allFont"
+              :key="idx"
+              :value="font.val"
+              :style="font.textStyle"
+            >
+              {{ font.name }}
+            </b-form-select-option>
+          </b-form-select>
+          <span>색상 </span>
+          <v-color-picker
+            v-model="colour"
+            dot-size="25"
+            swatches-max-height="200"
+            hide-inputs
+          />
+
+        </div>
       </div>
+    </b-container>
+    <div
+      class="p-4 container-fluid"
+      style="width: 60%;"
+    >
+      <v-btn
+        block
+        color="primary"
+        class="writeBtn"
+        elevation="2"
+        @click="screenshot"
+      >다운로드</v-btn>
+      <v-btn
+        block
+        class="writeBtn"
+        color="warning"
+        elevation="2"
+        @click="$router.back()"
+      >편지지 선택</v-btn>
+      <v-btn
+        block
+        class="writeBtn"
+        color="error"
+        elevation="2"
+        @click="reset"
+      >초기화</v-btn>
     </div>
-  </b-container>
+  </div>
 </template>
 
 <script>
-import ColourPicker from 'vue-colour-picker';
 
 export default {
   name: 'Write',
   components: {
-    ColourPicker,
   },
   data() {
     return {

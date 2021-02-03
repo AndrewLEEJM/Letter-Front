@@ -32,10 +32,9 @@
   width: 500px;
   min-width: 200px;
   height: 700px;
-  margin-top: 70px;
   margin-left: 10px;
 }
-.letter_back > p{
+.letter_back > div{
   position: relative;
   top: 105px;
   left: 75px;
@@ -43,6 +42,9 @@
   height: 504px;
   overflow: hidden;
   line-height: 2.25;
+}
+.letter_back > div > p{
+  word-break: break-all;
 }
 .paper{
   width: 300px;
@@ -87,16 +89,8 @@ img.paper.img-thumbnail:hover {
 .p-4.paper.container-fluid{
   text-align: center;
 }
-#btn1, #btn2{
-  margin-left: 10px;
-}
-@media screen and (max-width: 991px){
-  #btn1{
-    margin-left: 0px;
-  }
-  #btn1, #btn2{
-    margin-top: 10px;
-  }
+.writeBtn{
+  margin-top: 5px;
 }
 @media screen and (max-width: 800px){
   .letter_container{
@@ -129,10 +123,6 @@ img.paper.img-thumbnail:hover {
   img.paper.img-thumbnail {
     width: 150px;
     margin: 10px;
-  }
-  #btn1, #btn2{
-    margin-top: 0px; 
-    margin-left: 10px;
   }
 }
 
