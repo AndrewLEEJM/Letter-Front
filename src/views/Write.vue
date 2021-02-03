@@ -1,92 +1,79 @@
 <template>
-  <div>
-
-    <b-container
-      fluid
-      class="p-4"
-    >
-      <div id="explain">
-        <img src="../assets/write.jpg">
-      </div>
-      <div class="letter_container">
-        <div
-          ref="shotMe"
-          class="letter_back"
-          :style="{
-            'background-image':
-              'url(' + require(`../assets/images/${backImg}`) + ')',
-          }"
-        >
-          <div>
-            <p
-              :style="textFont"
-              v-html="letterText"
-            >
-              {{ letterText }}
-            </p>
-          </div>
-        </div>
-        <div class="letter_write">
-          <b-form-textarea
-            id="textarea-rows"
-            v-model="letter"
-            rows="14"
-            max-rows="14"
-            placeholder="Enter something..."
-          />
-          <br>
-          <span>글꼴 </span>
-          <b-form-select
-            v-model="selectedFont"
-            class="mb-3"
-          >
-            <b-form-select-option
-              v-for="(font, idx) in allFont"
-              :key="idx"
-              :value="font.val"
-              :style="font.textStyle"
-            >
-              {{ font.name }}
-            </b-form-select-option>
-          </b-form-select>
-          <span>색상 </span>
-          <v-color-picker
-            v-model="colour"
-            dot-size="25"
-            swatches-max-height="200"
-            hide-inputs
-          />
-
-        </div>
-      </div>
-    </b-container>
-    <div
-      class="p-4 container-fluid"
-      style="width: 60%;"
-    >
-      <v-btn
-        block
-        color="primary"
-        class="writeBtn"
-        elevation="2"
-        @click="screenshot"
-      >다운로드</v-btn>
-      <v-btn
-        block
-        class="writeBtn"
-        color="warning"
-        elevation="2"
-        @click="$router.back()"
-      >편지지 선택</v-btn>
-      <v-btn
-        block
-        class="writeBtn"
-        color="error"
-        elevation="2"
-        @click="reset"
-      >초기화</v-btn>
+  <b-container
+    fluid
+    class="p-4"
+  >
+    <div id="explain">
+      <img src="../assets/write.jpg">
     </div>
-  </div>
+    <div class="letter_container">
+      <div
+        ref="shotMe"
+        class="letter_back"
+        :style="{
+          'background-image':
+            'url(' + require(`../assets/images/${backImg}`) + ')',
+        }"
+      >
+        <div>
+          <textarea
+            id="texta"
+            v-model="letter"
+            name=""
+            cols="41"
+            rows="14"
+            spellcheck="false"
+            :style="textFont"
+          />
+        </div>
+      </div>
+      <div class="letter_write">
+        <br>
+        <span>글꼴 </span>
+        <b-form-select
+          v-model="selectedFont"
+          class="mb-3"
+        >
+          <b-form-select-option
+            v-for="(font, idx) in allFont"
+            :key="idx"
+            :value="font.val"
+            :style="font.textStyle"
+          >
+            {{ font.name }}
+          </b-form-select-option>
+        </b-form-select>
+        <span>색상 </span>
+        <v-color-picker
+          v-model="colour"
+          dot-size="25"
+          swatches-max-height="200"
+          hide-inputs
+        />
+        <v-btn
+          block
+          color="primary"
+          class="writeBtn"
+          elevation="2"
+          @click="screenshot"
+        >다운로드</v-btn>
+        <v-btn
+          block
+          class="writeBtn"
+          color="warning"
+          elevation="2"
+          @click="$router.back()"
+        >편지지 선택</v-btn>
+        <v-btn
+          block
+          class="writeBtn"
+          color="error"
+          elevation="2"
+          @click="reset"
+        >초기화</v-btn>
+      </div>
+    </div>
+  </b-container>
 </template>
 
 <script>
