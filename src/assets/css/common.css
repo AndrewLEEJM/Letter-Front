@@ -107,15 +107,48 @@ img.paper.img-thumbnail:hover {
     height: 700px;
     margin: 30px auto;
   }
-  .letter_back > p{
+  .letter_back > div{
     position: relative;
-    top: 82px;
+    top: 81px;
     left: 58px;
     width: 290px;
-    height: 504px;
+    height: 400px;
     overflow: hidden;
-    line-height: 2.08;
-    font-size: 14px;
+    line-height: 2.3;
+    font-size: 13px;
+  }
+  img.paper.img-thumbnail {
+    width: 150px;
+    margin: 10px;
+  }
+}
+@media screen and (max-width: 450px){
+  .letter_container{
+    padding-top: 60px;
+    display: block;
+  }
+  .letter_back{
+    width: 327px;
+    min-width: 327px;
+    height: 459px;
+    background-size: contain;
+    margin: 0 auto;
+  }
+  .letter_write{
+    width: 100%;
+    min-width: 100%;
+    height: 700px;
+    margin: 30px auto;
+  }
+  .letter_back > div{
+    position: relative;
+    top: 71px;
+    left: 47px;
+    width: 235px;
+    height: 320px;
+    overflow: hidden;
+    line-height: 1.99;
+    font-size: 12px;
   }
   img.paper.img-thumbnail {
     width: 150px;
