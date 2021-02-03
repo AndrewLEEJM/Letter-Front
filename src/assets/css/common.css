@@ -46,9 +46,6 @@
 .letter_back > div > p{
   word-break: break-all;
 }
-.paper{
-  width: 300px;
-}
 a{
   cursor: pointer;
 }
