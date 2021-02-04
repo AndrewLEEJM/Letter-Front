@@ -21,9 +21,7 @@
             id="ptag"
             :style="textFont"
             v-html="letterText"
-          >
-            {{ letter }}
-          </p>
+          />
           <textarea
             v-else
             id="texta"
@@ -129,7 +127,7 @@ export default {
   },
   computed: {
     letterText() {
-      return this.letter.replace(/(?:\r\n|\r|\n)/g, '<br />');
+      return this.letter.replace(/(?:\r\n|\r|\n)/g, '<br>').replace(/ /g, '&nbsp');
     },
     textFont() {
       return `font-family: ${this.selectedFont}; color: ${this.colour};`;
