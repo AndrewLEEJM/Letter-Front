@@ -29,6 +29,7 @@
             name=""
             spellcheck="false"
             :style="textFont"
+            placeholder="소중한 마음을 담아 편지를 작성해주세요."
           />
         </div>
       </div>
