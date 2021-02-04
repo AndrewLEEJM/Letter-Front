@@ -29,8 +29,6 @@
             id="texta"
             v-model="letter"
             name=""
-            cols="41"
-            rows="14"
             spellcheck="false"
             :style="textFont"
           />

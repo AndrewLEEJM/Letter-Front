@@ -36,10 +36,10 @@
 }
 .letter_back > div{
   position: relative;
-  top: 105px;
-  left: 75px;
-  width: 347px;
-  height: 504px;
+  top: 60px;
+  left: 66px;
+  width: 380px;
+  height: 580px;
   overflow: hidden;
   line-height: 2.25;
 }
@@ -90,18 +90,17 @@ img.paper.img-thumbnail:hover {
   overflow: hidden; 
   outline: none; 
   resize: none;
-  width: 345px;
+  width: 379px;
+  height: 580px;
 }
 #ptag{
   word-break: break-all;
   position: absolute;
   top: 0px;
-  width: 345px;
+  width: 379px;
+  height: 580px;
 }
 @media screen and (max-width: 800px){
-  #ptag{
-    width: 290px;
-  }
   .letter_container{
     display: block;
   }
@@ -120,10 +119,10 @@ img.paper.img-thumbnail:hover {
   }
   .letter_back > div{
     position: relative;
-    top: 82px;
-    left: 58px;
-    width: 290px;
-    height: 400px;
+    top: 42px;
+    left: 50px;
+    width: 320px;
+    height: 480px;
     overflow: hidden;
     line-height: 2.25;
     font-size: 13.2px;
@@ -132,9 +131,9 @@ img.paper.img-thumbnail:hover {
     width: 150px;
     margin: 10px;
   }
-  #texta{
-    height: 399px;
-    width: 290px;
+  #texta, #ptag{
+    height: 467px;
+    width: 315px;
   }
 }
 @media screen and (max-width: 450px){
@@ -150,10 +149,10 @@ img.paper.img-thumbnail:hover {
   }
   .letter_back > div{
     position: relative;
-    top: 67px;
-    left: 47px;
-    width: 230px;
-    height: 307px;
+    top: 30px;
+    left: 35px;
+    width: 245px;
+    height: 360px;
     overflow: hidden;
     line-height: 2.2;
     font-size: 10.4px;
@@ -162,12 +161,9 @@ img.paper.img-thumbnail:hover {
     width: 150px;
     margin: 10px;
   }
-  #texta {
-    width: 220px;
-    height: 307px;
-  }
-  #ptag{
-    width: 220px;
+  #texta, #ptag {
+    width: 244px;
+    height: 360px;
   }
 }
 
