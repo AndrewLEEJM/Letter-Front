@@ -77,8 +77,42 @@
           elevation="2"
           @click="reset"
         >초기화</v-btn>
+        <v-btn
+          color="primary"
+          elevation="2"
+          class="writeBtn"
+          @click="screenshotImg"
+          @click.stop="dialog = true"
+        >
+          Open Dialog
+        </v-btn>
       </div>
     </div>
+    <v-dialog
+      v-model="dialog"
+      max-width="550"
+    >
+      <v-card>
+        <v-card-title class="headline">
+          이미지를 저장해 보세요!
+        </v-card-title>
+
+        <v-card-text>
+          <img :src="output">
+        </v-card-text>
+
+        <v-card-actions>
+          <v-spacer />
+          <v-btn
+            color="green darken-1"
+            text
+            @click="dialog = false"
+          >
+            Agree
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
   </b-container>
 </template>
 
@@ -124,6 +158,8 @@ export default {
       ],
       backImg: '',
       capture: false,
+      output: null,
+      dialog: false,
     };
   },
   computed: {
@@ -160,6 +196,19 @@ export default {
       this.letter = '';
       this.selectedFont = '';
       this.colour = '#000000';
+    },
+    async screenshotImg() {
+      this.capture = true;
+      const el = this.$refs.shotMe;
+      // add option type to get the image version
+      // if not provided the promise will return
+      // the canvas.
+      const options = {
+        type: 'dataURL',
+      };
+      this.output = await this.$html2canvas(el, options);
+
+      this.capture = false;
     },
   },
 };
