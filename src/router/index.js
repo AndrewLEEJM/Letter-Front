@@ -3,6 +3,7 @@ import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
 import LetterPaper from '../views/LetterPaper.vue';
 import Write from '../views/Write.vue';
+import SaveImg from '../views/SaveImg.vue';
 
 Vue.use(VueRouter);
 
@@ -21,6 +22,11 @@ const routes = [
     path: '/write',
     name: 'Write',
     component: Write,
+  },
+  {
+    path: '/save-img',
+    name: 'SaveImg',
+    component: SaveImg,
   },
 ];
 

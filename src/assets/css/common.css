@@ -28,6 +28,13 @@
   min-width: 500px;
   height: 700px;
 }
+.letter_img{
+  padding-top: 20px;
+  width: 500px;
+  min-width: 500px;
+  height: 700px;
+  margin: 0 auto;
+}
 .letter_write{
   width: 300px;
   min-width: 200px;
@@ -111,6 +118,11 @@ img.paper.img-thumbnail:hover {
     background-size: contain;
     margin: 0 auto;
   }
+  .letter_img{
+    width: 400px;
+    min-width: 400px;
+    height: 560px;
+  }
   .letter_write{
     width: 300px;
     min-width: 200px;
@@ -146,6 +158,11 @@ img.paper.img-thumbnail:hover {
     height: 435px;
     background-size: contain;
     margin: 0 auto;
+  }
+  .letter_img{
+    width: 311px;
+    min-width: 311px;
+    height: 435px;
   }
   .letter_back > div{
     position: relative;
